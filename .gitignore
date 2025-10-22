@@ -1,0 +1,22 @@
+# Python
+__pycache__/
+*.py[cod]
+venv/
+*.pyc
+
+# Model (too large for GitHub)
+models/*.pth
+*.pth
+
+# Data files
+test_images/*.tif
+uploads/
+*.tif
+
+# IDE
+.vscode/
+.DS_Store
+
+# Results
+results/
+outputs/

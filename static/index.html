@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🔥 SWIR Wildfire Detection</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <header class="header">
+            <h1>🔥 SWIR Wildfire Detection</h1>
+            <p>AI-Powered Infrared Fire Detection System</p>
+            <div class="tech-badge">
+                <span>SWIR-ViT</span>
+                <span>Vision Transformer</span>
+                <span>88% Accuracy</span>
+            </div>
+        </header>
+
+        <!-- Upload Section -->
+        <div class="upload-section">
+            <div class="upload-area" id="uploadArea">
+                <input type="file" id="fileInput" accept=".tif,.tiff,.jpg,.jpeg,.png" hidden>
+                <div class="upload-icon">📤</div>
+                <h3>Upload SWIR Image</h3>
+                <p>Drag & drop or click to select</p>
+                <p class="file-info">Supported: .tif, .tiff, .jpg, .png</p>
+            </div>
+            
+            <button id="predictBtn" class="predict-btn" disabled>
+                🔍 Analyze Image
+            </button>
+        </div>
+
+        <!-- Preview Section -->
+        <div id="preview" class="preview hidden">
+            <h3>📁 Uploaded Image</h3>
+            <div id="fileName" class="file-name"></div>
+        </div>
+
+        <!-- Loading -->
+        <div id="loading" class="loading hidden">
+            <div class="spinner"></div>
+            <p>Analyzing SWIR imagery...</p>
+        </div>
+
+        <!-- Results Section -->
+        <div id="results" class="results hidden">
+            <div id="resultCard" class="result-card">
+                <div class="result-header">
+                    <h2 id="resultTitle">Results</h2>
+                    <div id="resultIcon" class="result-icon"></div>
+                </div>
+                
+                <div class="prediction">
+                    <span class="label">Prediction:</span>
+                    <span id="predictionText" class="prediction-text"></span>
+                </div>
+
+                <div class="confidence">
+                    <span class="label">Confidence:</span>
+                    <span id="confidenceText" class="confidence-text"></span>
+                </div>
+
+                <div class="probabilities">
+                    <div class="prob-bar">
+                        <div class="prob-label">
+                            <span>🔥 Fire</span>
+                            <span id="fireProb">0%</span>
+                        </div>
+                        <div class="progress-bar">
+                            <div id="fireBar" class="progress-fill fire-color"></div>
+                        </div>
+                    </div>
+                    <div class="prob-bar">
+                        <div class="prob-label">
+                            <span>✅ Safe</span>
+                            <span id="safeProb">0%</span>
+                        </div>
+                        <div class="progress-bar">
+                            <div id="safeBar" class="progress-fill safe-color"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="alertMessage" class="alert-message hidden"></div>
+
+                <button id="analyzeAnother" class="secondary-btn">
+                    🔄 Analyze Another Image
+                </button>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <p>Powered by SWIR-ViT (Vision Transformer) | DeiT-Base Architecture</p>
+            <p>Trained on Short-Wave Infrared Satellite Imagery</p>
+        </footer>
+    </div>
+
+    <script src="/static/script.js"></script>
+</body>
+</html>
