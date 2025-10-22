@@ -11,3 +11,8 @@ AI-powered wildfire detection using SWIR satellite imagery and Vision Transforme
 - FastAPI (Backend)
 - HTML/CSS/JS (Frontend)
 - SWIR satellite imagery processing
+
+
+[📥 Download best_model.pth from Google Drive]
+
+https://drive.google.com/drive/folders/1iDYrU4dnctufyhaNoXdkM3l8g-naSyMh?usp=share_link
